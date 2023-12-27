@@ -1,0 +1,52 @@
+@import "../../css-config/mixins.scss";
+
+.not-found {
+  width: 100%;
+  .content {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    @include md {
+      height: 60vh;
+    }
+    .title {
+      font-size: 35px;
+      font-weight: 600;
+      @include md {
+        font-size: 50px;
+      }
+    }
+    .para {
+      font-size: 17px;
+      font-weight: 100;
+      @include md {
+        font-size: 20px;
+      }
+    }
+    button {
+      padding: 7px 14px;
+      background-color: #4802c0;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: white;
+      font-size: 20px;
+      border-radius: 5px;
+      transition: 0.2s all ease;
+      @include md {
+        padding: 15px 30px;
+        font-size: 25px;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      &:hover {
+        background-color: #3a029c;
+      }
+    }
+  }
+}

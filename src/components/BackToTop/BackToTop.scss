@@ -1,0 +1,59 @@
+@import "../../css-config/mixins.scss";
+
+.back-to-top {
+  position: fixed;
+  bottom: 45px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  //   display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  box-shadow: -1px 5px 10px rgba(0, 0, 0, 0.2);
+  @include md {
+    width: 50px;
+    height: 50px;
+    bottom: 80px;
+    right: 50px;
+  }
+  svg {
+    color: white;
+    font-size: 20px;
+    @include md {
+      font-size: 25px;
+    }
+  }
+}
+
+.showBtn {
+  display: flex;
+  animation: topBtn 0.2s ease-in-out forwards;
+  cursor: pointer;
+}
+.hideBtn {
+  //   display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: hideBtn 0.2s ease forwards;
+}
+
+@keyframes topBtn {
+  0% {
+    transform: scale(0, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes hideBtn {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(0, 0);
+  }
+}
